@@ -339,8 +339,10 @@ display: flex;
   flex-flow: column-reverse;
 }
   .boxqs{
+    position: relative;
     margin: 0 auto;
     width: 90%;
+    margin-top: 20px;
     max-width: 600px;
   }
   .preboxqs{
@@ -412,6 +414,10 @@ align-items: flex-start;
   margin: 0 auto;
   justify-content: flex-start;
 }
+.boxof h1{
+  margin: 0;
+  font-size: 1.7em;
+}
 .preboxof{
   display: none;
 }
@@ -426,6 +432,15 @@ align-items: flex-start;
   left: 0; top: 0;
 }
 }
+@media only screen and (max-width : 500px) {
+  .boxof p{
+    margin-top: 3px;
+  }
+  .boxof h1{
+    margin-top: -20px;
+  }
+}
+
 /* -------------------COMO FAZEMOS PAGINA ---------------------- */
 
 .comofazemos{
@@ -485,6 +500,12 @@ align-items: flex-start;
   justify-content: flex-start;
   align-content: center;
   }
+
+  .boxcf h1{
+    margin-top: 10px;
+    font-size: 1.7em;
+  }
+
   .boxcf ul{
     padding-left: 0px;
   }
@@ -495,6 +516,12 @@ align-items: flex-start;
     display: none;
   }
 }
+@media only screen and (max-width : 610px) {
+  .boxcf h1{
+width: 300px;
+}
+}
+
 
 /* -------------------PROCESSO PAGINA ---------------------- */
 .comotrabalhamos{

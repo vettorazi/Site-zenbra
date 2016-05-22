@@ -1,0 +1,66 @@
+<style media="screen">
+.ajax-container{
+  background-image: url(imgs/portfolio/portfolio_auris.jpg);
+}
+
+ .flexslider{
+  height: 310px;
+}
+.flexslider ul{
+  align-items: center;
+  align-content: center;
+}
+</style>
+
+<div class="ajax-container">
+     <div class="botaofechar" id="fecharbt">
+       <h1><i class="ion-close"></i></h1>
+     </div>
+     <div class="trabalho-container">
+       <div class="trabalho-esquerda">
+         <div class="trabalho-titulo">
+            <div class="trabalho-logo">
+              <img src="imgs/logo/auris.png" alt="img11" width="90px" height"90px"/>
+            </div>
+            <h1>Espada conectadas à internet</h1>
+          </div>
+            <p>
+              Trabalhamos em equipe com agências, produtoras e start-ups. Desde a criação, planejamento e produção de uma ideia, até à hora da entrega dela.</br>
+              APor isso, nos orgulhamos de dizer: Não temos clientes. Temos parceiros. :)
+            </p>
+        </div>
+        <div class="trabalho-direita">
+          <div class="flexslider">
+            <ul class="slides">
+              <li>
+                <img src="imgs/trabalhos/warner/1.jpg" />
+              </li>
+              <li>
+                <img src="imgs/trabalhos/warner/2.jpg" />
+              </li>
+              <li>
+                <img src="imgs/topslide1.png" />
+                <p>
+                  Trabalhamos em equipe com agências, produtoras e start-ups. Desde a criação, planejamento e produção de uma ideia, até à hora da entrega dela.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+$('#fecharbt h1').click(function(event) {
+  $('#trabalho').empty();
+  $('html, body').animate({
+scrollTop: $("#portfolio").offset().top
+}, 1000);
+      });
+</script>
+
+<script type="text/javascript">
+  console.log("oi");
+  $('.flexslider').flexslider({
+    animation: "slide"
+  });
+</script>

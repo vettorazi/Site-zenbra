@@ -174,52 +174,52 @@ Mexemos desde sites à robotica. Serramos madeiras, soldamos placas, escrevemos 
     <div class="portfolio" id="portfolio">
       <div class="grid">
         <figure class="logo">
-          <img src="imgs/logo/adidas.png" alt="img03"/>
+          <img src="imgs/logo/adidas.png" alt="img03" onclick="abreportfolio('p_adidas.html')"/>
         </figure>
         <figure class="logo">
-          <img src="imgs/logo/previsul.png" alt="img03"/>
+          <img src="imgs/logo/previsul.png" alt="img03" onclick="abreportfolio('p_previsul.html')"/>
         </figure>
         <figure class="logo">
-          <img src="imgs/logo/ici.png" alt="img11"/>
+          <img src="imgs/logo/ici.png" alt="img11" onclick="abreportfolio('p_ici.html')"/>
         </figure>
         <figure class="logo">
-          <img src="imgs/logo/villa.png" alt="img03"/>
+          <img src="imgs/logo/villa.png" alt="img03" onclick="abreportfolio('p_villa.html')"/>
         </figure>
         <figure class="logo">
-          <img src="imgs/logo/dakota.png" alt="img11"/>
+          <img src="imgs/logo/dakota.png" alt="img11" onclick="abreportfolio('p_dakota.html')"/>
         </figure>
         <figure class="logo">
-          <img src="imgs/logo/melissa.png" alt="img03"/>
+          <img src="imgs/logo/melissa.png" alt="img03" onclick="abreportfolio('p_melissa.html')"/>
         </figure>
         <figure class="logo">
-          <img src="imgs/logo/multiplan.png" alt="img11"/>
+          <img src="imgs/logo/multiplan.png" alt="img11" onclick="abreportfolio('p_multiplan.html')"/>
         </figure>
         <figure class="logo">
-          <img src="imgs/logo/pagseguro.png" alt="img03"/>
+          <img src="imgs/logo/pagseguro.png" alt="img03" onclick="abreportfolio('p_pagseguro.html')"/>
         </figure>
         <figure class="logo">
-          <img src="imgs/logo/renner.png" alt="img11"/>
+          <img src="imgs/logo/renner.png" alt="img11" onclick="abreportfolio('p_renner.html')"/>
         </figure>
         <figure class="logo">
-          <img src="imgs/logo/wb.png" alt="img03"/>
+          <img src="imgs/logo/wb.png" alt="img03" onclick="abreportfolio('p_warner.html')"/>
         </figure>
         <figure class="logo">
-          <img src="imgs/logo/massey.png" alt="img11"/>
+          <img src="imgs/logo/massey.png" alt="img11" onclick="abreportfolio('p_massey.html')"/>
         </figure>
         <figure class="logo">
-          <img src="imgs/logo/tgd.png" alt="img03"/>
+          <img src="imgs/logo/tgd.png" alt="img03" onclick="abreportfolio('p_tgd.html')"/>
         </figure>
         <figure class="logo">
-        <img id="clique" src="imgs/logo/beco.png" alt="img11"/>
+        <img id="clique" src="imgs/logo/beco.png" alt="img11" onclick="abreportfolio('p_beco.html')"/>
         </figure>
         <figure class="logo">
-          <img src="imgs/logo/oas.png" alt="img11"/>
+          <img src="imgs/logo/oas.png" alt="img11" onclick="abreportfolio('p_oas.html')"/>
         </figure>
         <figure class="logo">
-          <img src="imgs/logo/auris.png" alt="img11"/>
+          <img src="imgs/logo/auris.png" alt="img11" onclick="abreportfolio('p_auris.html')"/>
         </figure>
         <figure class="logo">
-          <img src="imgs/logo/florybal.png" alt="img11"/>
+          <img src="imgs/logo/florybal.png" alt="img11" onclick="abreportfolio('p_florybal.html')"/>
         </figure>
       </div>
     </div>
@@ -333,15 +333,25 @@ $(window).load(function(){
   } );
 </script>
 <script type="text/javascript">
-$(document).ready(function(){
+/*$(document).ready(function(){
                 $('.logo').click(function(event) {
+                  console.log("oi");
              $('#trabalho').load('p_warner.html');
             $('html, body').animate({
         scrollTop: $("#trabalho").offset().top
       }, 1000);
 
           });
-});
+});*/
+function abreportfolio(link) {
+  console.log(link);
+  $('#trabalho').load(link);
+ $('html, body').animate({
+scrollTop: $("#trabalho").offset().top
+}, 1000);
+
+}
+
 </script>
   </body>
 </html>
