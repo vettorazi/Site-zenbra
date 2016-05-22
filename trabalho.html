@@ -1,0 +1,163 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+<style media="screen">
+body{
+  margin: 0px 0px 0px 0px;
+}
+.ajax-container{
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  align-items: flex-end;
+  background-image: url(imgs/portfolio/portfolio_warner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.botaofechar{
+  display: flex;
+  position: relative;
+  max-width: 1000px;
+  width:100%;
+  height: 40px;
+  margin: 0 auto;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.botaofechar h1{
+  cursor: pointer;
+}
+
+.trabalho-container{
+  display: flex;
+  flex-flow: row;
+  max-width: 1000px;
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+}
+.trabalho-direita{
+  width: 50%;
+  height: 500px
+}
+.trabalho-esquerda{
+  width: 50%;
+  height: 500px
+}
+.trabalho-titulo{
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+}
+.trabalho-logo{
+  width: 100px;
+  margin: 0 auto;
+  align-self: center;
+}
+.trabalho-logo img{
+  -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+      filter: grayscale(100%);
+    }
+.trabalho-esquerda p{
+  text-align: justify;
+  text-justify: inter-word;
+  padding: 0px 30px 30px 30px;
+}
+ .flexslider{
+  height: 310px;
+}
+.flexslider ul{
+  align-items: center;
+  align-content: center;
+}
+
+@media only screen and (max-width : 800px){
+  .trabalho-container{
+    flex-direction: column;
+    height: 100%;
+  }
+  .trabalho-esquerda{
+    width: 100%;
+  }
+  .trabalho-logo{
+    justify-content: flex-start;
+    margin: 10px;
+  }
+  .trabalho-titulo{
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 0 0 0;
+    width: 100%;
+  }
+  .trabalho-direita{
+    width: 100%;
+  }
+  .flexslider{
+   height: 400px;
+ }
+}
+
+
+</style>
+<div class="ajax-container">
+     <div class="botaofechar" id="fecharbt">
+       <h1>x<i class="ion-close"></i></h1>
+     </div>
+     <div class="trabalho-container">
+       <div class="trabalho-esquerda">
+         <div class="trabalho-titulo">
+            <div class="trabalho-logo">
+              <img src="imgs/logo/oas.png" alt="img11" width="90px" height"90px"/>
+            </div>
+            <h1>Espada conectadas à internet</h1>
+          </div>
+            <p>
+              Trabalhamos em equipe com agências, produtoras e start-ups. Desde a criação, planejamento e produção de uma ideia, até à hora da entrega dela.</br>
+              APor isso, nos orgulhamos de dizer: Não temos clientes. Temos parceiros. :)
+            </p>
+        </div>
+        <div class="trabalho-direita">
+          <div class="flexslider">
+            <ul class="slides">
+              <li>
+                <img src="imgs/trabalhos/adidas/imgpsh_fullsize.jpeg" />
+              </li>
+              <li>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TeQjeU3vQDk" frameborder="0" allowfullscreen></iframe>
+              </li>
+              <li>
+                <img src="imgs/trabalhos/adidas/imgpsh_fullsize.jpeg" />
+
+              </li>
+              <li>
+                <img src="imgs/topslide1.png" />
+                <p>
+                  Trabalhamos em equipe com agências, produtoras e start-ups. Desde a criação, planejamento e produção de uma ideia, até à hora da entrega dela.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+$('#fecharbt h1').click(function(event) {
+  console.log("oi");
+  $('#trabalho').load('');
+  $('html, body').animate({
+scrollTop: $("#portfolio").offset().top
+}, 1000);
+      });
+</script>
+<script defer src="js/jquery.flexslider.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/jquery.mousewheel.js"></script>
+<script defer src="js/demo.js"></script>
+
+<script type="text/javascript">
+$(window).load(function(){
+  $('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
+</script>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Zenbra Tecnolab</title>
+    <link rel="stylesheet" href="css/master.css" media="screen" title="no title" charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Exo:100,400,200,700italic,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="screen" title="no title" charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+    <script src="js/scroll.js" charset="utf-8"></script>
+    <!--BOTAO BACANA DO MOBILE-->
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="js/segment.min.js"></script>
+    <script src="js/ease.min.js"></script>
+    <!--BOTAO BACANA DO MOBILE-->
+    </head>
+  <body>
+    <div class="topo">
+      <div class="esqmenu"><a href="http://www.zenbra.com.br"><img src="imgs/LOGO-OK-WHITE.png" alt="" style="padding-left:80px; padding-top:3px;"/></a></div>
+        <nav class="menu menu--francisco">
+          	<ul class="menu__list">
+          <li class="menu__item menu__item--current"><a href="#home" class="menu__link"><span class="menu__helper">Página inicial</span></a></li>
+          <li class="menu__item"><a href="#quemsomos" class="menu__link"><span class="menu__helper">Quem somos</span></a></li>
+          <li class="menu__item"><a href="#oquefazemos" class="menu__link"><span class="menu__helper">O que fazemos</span></a></li>
+          <li class="menu__item"><a href="#comofazemos" class="menu__link"><span class="menu__helper">Como fazemos</span></a></li>
+          <li class="menu__item"><a href="#portfolio" class="menu__link"><span class="menu__helper">Portfolio</span></a></li>
+          <li class="menu__item"><a href="#contato" class="menu__link"><span class="menu__helper">Contato</span></a></li>
+        	<ul class="menu__list">
+        </nav>
+        <div class="botaomobile">
+      <!--BOTAO BACANA DO MOBILE-->
+              <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: hidden">
+                <svg width="1000px" height="1000px">
+                  <path id="pathA" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+                  <path id="pathB" d="M 300 500 L 700 500"></path>
+                  <path id="pathC" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+                </svg>
+                <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+              </div><!-- menu-icon-wrapper -->
+      <script src="js/main.js"></script>
+      <script type="text/javascript">
+                $(function() {
+                  var clicado=false;
+
+          $('.menu-icon-wrapper').click(function(){
+            console.log("clique");
+            if (clicado==false) {
+              $('.dummy').addClass('aberto');
+              clicado=true;
+              console.log(clicado);
+            }
+            else if (clicado==true) {
+              $('.dummy').removeClass('aberto');
+              clicado=false;
+              console.log(clicado);
+            }
+          }
+        );
+          });
+
+      </script>
+        </div>
+      <!--BOTAO BACANA DO MOBILE-->
+    </div>
+    <div id="dummy" class="dummy">
+      <div class="dummy__item">PAGINA INICIAL</div>
+      <div class="dummy__item">QUEM SOMOS</div>
+      <div class="dummy__item">COMO FAZEMOS</div>
+      <div class="dummy__item">PORTFOLIO</div>
+    </div><!-- /dummy -->
+    <div id= "home" class="header">
+    <div class="logohome"><img src="imgs/logohome.png" alt="" /></div>
+    </div>
+    <div id="quemsomos" class="quemsomos">
+      <div class="preboxqs">
+      </div>
+       <div class="boxqs">
+         <ul>
+           <h1>Somos diferentes, somos Zenbra</h1>
+         </ul>
+          <ul>
+          <p>
+            Nós somos pensadores, developers, publicitários, videomakers, jornalistas, artistas e fazemos coisas. Coisas legais. Coisas reais.
+  A gente constrói experiências, produtos, conteúdo e soluções para problemas diários.
+  </br>Acreditamos na tecnologia como forma de expressão e comunicação.
+  Somos inquietos, esgotamos possibilidades e acreditamos no potencial de ideias.
+</br>Criamos coisas diferentes todos os dias. e amamos isso.
+          </p>
+          </ul>
+        </div>
+    </div>
+    <div id="oquefazemos" class="oquefazemos">
+      <div class="boxof">
+        <h1>Do A ao Z. </br>Do software ao Hardware.</h1>
+        <p>
+          Desenvolvemos conteúdos interativos para eventos, marcas e agências.
+          Não trabalhamos apenas com vídeos e códigos. Somos diferentes. Amamos colocar a mão na massa.
+Mexemos desde sites à robotica. Serramos madeiras, soldamos placas, escrevemos códigos, editamos videos, pensamos em soluções para ideias e nossa filosofia de trabalho é <b>"If you can draw, we can make it."</b>
+</br>Quer saber mais o que fazemos? Veja o video aí do lado. ;)
+        </p>
+
+      </div>
+    </div>
+    <div id="comofazemos" class="comofazemos">
+      <div class="preboxqs">
+      </div>
+       <div class="boxcf">
+         <ul>
+           <h1>Não temos clientes. Temos parceiros.</h1>
+         </ul>
+          <ul>
+          <p>
+            Trabalhamos em equipe com agências, produtoras e start-ups. Desde a criação, planejamento e produção de uma ideia, até à hora da entrega dela.</br>
+            Acreditamos no poder de parceria em cada trabalho e não importa o tamanho do job, desde o pontapé inicial até a entrega, trabalhamos com uma equipe focada 100% no seu projeto. Ou seja, nossos colaboradores são contratados por projeto e ficam focados nele do começo ao fim. </br>
+            Somos multiplataforma. Não importa em qual etapa está o projeto, podemos contribuir para ele crescer e termos o melhor resultado possivel.
+            Por isso, nos orgulhamos de dizer: Não temos clientes. Temos parceiros. :)
+          </p>
+          </ul>
+        </div>
+    </div>
+    <div class="comotrabalhamos">
+
+    </div>
+    <div class="portfolio" id="portfolio">
+      <div class="grid">
+        <figure class="logo">
+        <img id="clique" src="imgs/7.jpg" alt="img11"/>
+          <figcaption>
+            <h2>Faithful <span>Milo</span></h2>
+            <p>Milo went to the woods. He took a fun ride and never came back.</p>
+            <a href="#">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="logo" class="cbp-nttrigger">
+          <img src="imgs/7.jpg" alt="img03"/>
+          <figcaption>
+            	<div class="cbp-ntcontent"></div>
+            <h2>Faithful <span>Milo</span></h2>
+            <p>Milo went to the woods. He took a fun ride and never came back.</p>
+            <a href="#">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="logo">
+          <img src="imgs/7.jpg" alt="img11"/>
+          <figcaption>
+            <h2>Faithful <span>Milo</span></h2>
+            <p>Milo went to the woods. He took a fun ride and never came back.</p>
+            <a href="#">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="logo">
+          <img src="imgs/7.jpg" alt="img03"/>
+          <figcaption>
+            <h2>Faithful <span>Milo</span></h2>
+            <p>Milo went to the woods. He took a fun ride and never came back.</p>
+            <a href="#">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="logo">
+          <img src="imgs/7.jpg" alt="img11"/>
+          <figcaption>
+            <h2>Faithful <span>Milo</span></h2>
+            <p>Milo went to the woods. He took a fun ride and never came back.</p>
+            <a href="#">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="logo">
+          <img src="imgs/7.jpg" alt="img03"/>
+          <figcaption>
+            <h2>Faithful <span>Milo</span></h2>
+            <p>Milo went to the woods. He took a fun ride and never came back.</p>
+            <a href="#">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="logo">
+          <img src="imgs/7.jpg" alt="img11"/>
+          <figcaption>
+            <h2>Faithful <span>Milo</span></h2>
+            <p>Milo went to the woods. He took a fun ride and never came back.</p>
+            <a href="#">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="logo">
+          <img src="imgs/7.jpg" alt="img03"/>
+          <figcaption>
+            <h2>Faithful <span>Milo</span></h2>
+            <p>Milo went to the woods. He took a fun ride and never came back.</p>
+            <a href="#">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="logo">
+          <img src="imgs/7.jpg" alt="img11"/>
+          <figcaption>
+            <h2>Faithful <span>Milo</span></h2>
+            <p>Milo went to the woods. He took a fun ride and never came back.</p>
+            <a href="#">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="logo">
+          <img src="imgs/7.jpg" alt="img03"/>
+          <figcaption>
+            <h2>Faithful <span>Milo</span></h2>
+            <p>Milo went to the woods. He took a fun ride and never came back.</p>
+            <a href="#">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="logo">
+          <img src="imgs/7.jpg" alt="img11"/>
+          <figcaption>
+            <h2>Faithful <span>Milo</span></h2>
+            <p>Milo went to the woods. He took a fun ride and never came back.</p>
+            <a href="#">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="logo">
+          <img src="imgs/7.jpg" alt="img03"/>
+          <figcaption>
+            <h2>Faithful <span>Milo</span></h2>
+            <p>Milo went to the woods. He took a fun ride and never came back.</p>
+            <a href="#">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="logo">
+          <img src="imgs/7.jpg" alt="img11"/>
+          <figcaption>
+            <h2>Faithful <span>Milo</span></h2>
+            <p>Milo went to the woods. He took a fun ride and never came back.</p>
+            <a href="#">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="logo">
+          <img src="imgs/7.jpg" alt="img03"/>
+          <figcaption>
+            <h2>Faithful <span>Milo</span></h2>
+            <p>Milo went to the woods. He took a fun ride and never came back.</p>
+            <a href="#">View more</a>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="trabalho"id="trabalho">
+    </div>
+    <div class="contato" id="contato"></div>
+    <script src="js/classie.js"></script>
+  <script src="js/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+                  $('.logo').click(function(event) {
+               $('#trabalho').load('trabalho.html');
+              $('html, body').animate({
+          scrollTop: $("#trabalho").offset().top
+        }, 1000);
+
+            });
+});
+  </script>
+  <script>
+  (function() {
+    [].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+      var menuItems = menu.querySelectorAll('.menu__link'),
+        setCurrent = function(ev) {
+          ev.preventDefault();
+
+          var item = ev.target.parentNode; // li
+
+          // return if already current
+          if (classie.has(item, 'menu__item--current')) {
+            return false;
+          }
+          // remove current
+          classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+          // set current
+          classie.add(item, 'menu__item--current');
+        };
+
+      [].slice.call(menuItems).forEach(function(el) {
+        el.addEventListener('click', setCurrent);
+      });
+    });
+
+  })(window);
+
+  </script>
+
+  </body>
+</html>
