@@ -526,20 +526,17 @@ width: 300px;
 /* -------------------PROCESSO PAGINA ---------------------- */
 .comotrabalhamos{
   display: flex;
-  background-color: #000;
-  width:100vw;
+  background-color: #fff;
+  width:99vw;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   flex-direction: row;
   background-attachment: fixed;
-  padding: 0  auto;
   margin: 0 auto;
 }
 
 .fundovideo {
-  min-width: 100%;
-  min-height: 100%;
   width: 100%;
   height: 100%;
   background-color: #000;
