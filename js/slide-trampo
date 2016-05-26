@@ -1,0 +1,34 @@
+$(document).ready(function(){
+
+	// Set the initial state: Hide all but the first slide
+	$('.slideshow').find('> div:eq(0)').nextAll().css({'opacity':'0','display':'none'});
+
+	// On click of a controller link...
+	$('.controls > a').click(function(event) {
+		event.preventDefault();
+
+		// Get the div containing the clicked link...
+		var currentslide = $(this).parents('div:first');
+
+		// ... and get the index of that div
+		var currentposition = $('.slideshow div').index(currentslide);
+
+		// Use that index to get the slide we'll be fading to
+		var nextposition = ($(this).attr('class')=='next') ? currentposition+1 : currentposition-1;
+
+		// Fade the current slide out...
+		$('.slideshow div:eq('+currentposition+')').animate({opacity: 0}, 250, function() {
+
+			// ... and hide it.
+			$('.slideshow div:eq('+currentposition+')').css('display','none');
+
+			// Show the next slide...
+			$('.slideshow div:eq('+nextposition+')').css('display','block');
+
+			// ... and fade it in.
+			$('.slideshow div:eq('+nextposition+')').animate({opacity: 100}, 1500);
+		  }
+		);
+	});
+
+});
