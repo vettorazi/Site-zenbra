@@ -1,18 +1,43 @@
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
 <style media="screen">
 .ajax-container{
   background-image: url(imgs/portfolio/portfolio_massey.jpg);
 }
 
- .flexslider{
-  height: 310px;
+</style>
+
+<style media="screen">
+.slider-portfolio {
+max-width: 500px;
+background-color: black;
+margin: 0 auto;
+text-align: center;
+position: relative;
 }
-.flexslider ul{
-  align-items: center;
-  align-content: center;
+.slider-portfolio div {
+background-color: white;
+width: 100%;
+display: inline-block;
+display: none;
 }
-.flexslider p, h1{
-  color: #000;
+.slider-portfolio img {
+width: 100%;
+height: auto;
 }
+
+button {
+position: absolute;
+}
+
+.next {
+right: 5px;
+}
+
+.prev {
+left: 5px;
+}
+
 </style>
 
 <div class="ajax-container">
@@ -20,45 +45,93 @@
        <h1><i class="ion-close"></i></h1>
      </div>
      <div class="trabalho-inteiro-container">
-        <div class="trabalho-inteiro">
-          <div class="flexslider">
-            <ul class="slides">
-              <li>
-                <img src="imgs/trabalhos/warner/1.jpg" />
-              </li>
-              <li>
-                <img src="imgs/trabalhos/warner/2.jpg" />
-              </li>
-              <li>
-                <div class="trabalho-titulo">
-                     <div class="trabalho-logo">
-                       <img src="imgs/logo/massey.png" alt="img11" width="90px" height"90px"/>
-                     </div>
-                     <h1>Espada conectadas à internet</h1>
+                   <button class="next">Next</button>
+              <button class="prev">Previous</button>
+              <div class="slider-portfolio">
+                <div  class="carta">
+                  <div class="trabalho-titulo">
+                    <div class="trabalho-logo">
+                    <img src="imgs/logo/massey.png" alt="img11" width="90px" height"90px"/>
+                  </div>
+                    <h1>Espada conectadas à internet</h1>
+                  </div>
+                  <p>
+                    Trabalhamos em equipe com agências, produtoras e start-ups. Desde a criação, planejamento e produção de uma ideia, até à hora da entrega dela.</br>
+                    APor isso, nos orgulhamos de dizer: Não temos clientes. Temos parceiros. :)
+                  </p>
+              </div>
+                <div class="carta">
+                 <img src="https://placeimg.com/400/200/any"/>
                 </div>
-                     <p>
-                       Trabalhamos em equipe com agências, produtoras e start-ups. Desde a criação, planejamento e produção de uma ideia, até à hora da entrega dela.</br>
-                       APor isso, nos orgulhamos de dizer: Não temos clientes. Temos parceiros. :)
-                     </p>
-                 </div>
-              </li>
-            </ul>
-          </div>
-        </div>
+                <div class="carta">
+                  <img src="https://placeimg.com/400/200/nature"/>
+                </div>
+                <div class="carta">
+                  <img src="https://placeimg.com/400/200/architecture"/>
+                </div>
+                <div class="carta">
+                  <img src="https://placeimg.com/400/200/animals"/>
+                </div>
+                <div class="carta">
+                  <img src="https://placeimg.com/400/200/people"/>
+                </div>
+                <div class="carta">
+                  <img src="https://placeimg.com/400/200/tech"/>
+                </div>
+              </div>
     </div>
 </div>
 <script type="text/javascript">
-$('#fecharbt h1').click(function(event) {
-  $('#trabalho').empty();
-  $('html, body').animate({
-scrollTop: $("#portfolio").offset().top
-}, 1000);
-      });
-</script>
+var currentIndex = 0,
+  items = $('.slider-portfolio .carta'),
+  itemAmt = items.length;
+  console.log(items);
+  console.log(itemAmt);
 
-<script type="text/javascript">
-  console.log("oi");
-  $('.flexslider').flexslider({
-    animation: "slide"
-  });
+if (currentIndex == 0) {
+   $(".prev").css("display", "none");
+  }
+
+function cycleItems() {
+  var item = $('.slider-portfolio .carta').eq(currentIndex);
+  items.hide();
+  item.css('display','inline-block');
+}
+
+var autoSlide = setInterval(function() {
+  currentIndex += 1;
+  if (currentIndex > itemAmt - 1) {
+    currentIndex = 0;
+  }
+  cycleItems();
+}, 3000);
+
+$('.next').click(function() {
+  console.log(currentIndex);
+  clearInterval(autoSlide);
+  currentIndex += 1;
+  if (currentIndex > itemAmt - 1) {
+    currentIndex = 0;
+  }
+  if(currentIndex==6){
+    $(".next").css("display","none");
+  }
+  if(currentIndex>0){
+$(".prev").css("display", "inline-block");
+};
+  cycleItems();
+});
+
+$('.prev').click(function() {
+  clearInterval(autoSlide);
+  currentIndex -= 1;
+  if (currentIndex < 0) {
+   $(".prev").css("display", "none");
+    currentIndex = itemAmt - 1;
+  }
+  if(currentIndex==5){
+    $(".next").css("display","inline-block");
+  }
+  cycleItems();
+});
 </script>
