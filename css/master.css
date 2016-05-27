@@ -659,11 +659,3 @@ width: 300px;
 .botaofechar h1{
   cursor: pointer;
 }
-
-@media only screen and (max-width : 1000px){
-  .trabalho-inteiro-container{
-    flex-direction: column;
-    height: 100%;
-    margin: 0 auto;
-  }
-}

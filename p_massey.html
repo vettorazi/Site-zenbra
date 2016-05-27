@@ -1,9 +1,5 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
 <style media="screen">
-body{
-  margin: 0 0 0 0;
-}
 .ajax-container{
   display: flex;
   flex-flow: column;
@@ -11,19 +7,26 @@ body{
   background-position: center;
   background-size: cover;
   height:100vh;
+  overflow: hidden;
 }
-</style>
-
-<style media="screen">
 .trabalho-inteiro-container{
   width:600px;
   height:400px;
   justify-content: center;
   flex-flow: column;
-  margin: 20%;
-  margin-top: 10%;
+  margin: 0 auto;
+  margin-left: 10%;
+  margin-top: 4%;
 }
 .up{
+  display: flex;
+  width: 100%;
+  height:50px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.down{
   display: flex;
   width: 100%;
   height:50px;
@@ -50,8 +53,24 @@ height: auto;
 }
 button{
   width:32px;
+}
+button:focus {
+  outline:0;
+animation: parado;
+}
+.down button{
+  width:32px;
+  -webkit-animation: setacliqueme 1s infinite;  /* Chrome, Safari, Opera */
+     animation: setacliqueme 1s infinite;
+}
+.down button:active{
+  width:32px;
+    animation: parado;
+  -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+  animation-play-state: paused;
 
 }
+
 .botaofechar{
   position: absolute;
   right:50px;
@@ -62,14 +81,13 @@ button{
   z-index: 9;
 }
 
-.topo{
+.trabalho-inteiro-topo{
   display: flex;
   flex-flow: row;
   width: 100%;
   height: 100px;
   align-content: center;
   align-items: center;
-  background-color: blue;
 }
 .logo{
   width:100px;
@@ -85,15 +103,28 @@ button{
 }
 .carta p{
   text-align: justify;
+    color:#000;
+}
+h1{
+  color:#000;
+}
+/*Animacao do botao*/
+@keyframes setacliqueme{
+  from {padding-top:-30px; opacity: 1;}
+  to{padding-top: 30px;opacity: 0;}
+}
+@keyframes parado{
+  from {padding-top:0px; opacity: 1;}
+  to{padding-top: 0px;opacity: 1;}
 }
 </style>
 
 <div class="ajax-container">
      <div class="botaofechar" id="fecharbt">
-       <h1>X<i class="ion-close"></i></h1>
+       <h1><i class="ion-close"></i></h1>
      </div>
      <div class="trabalho-inteiro-container">
-       <div class="topo">
+       <div class="trabalho-inteiro-topo">
          <div class="logo"><img src="imgs/logo/massey.png" alt="img11" class="logo"/></div>
          <div class="trabalho-titulo"><h1>Espada conectadas à internet</h1></div>
        </div>
@@ -103,7 +134,11 @@ button{
               <div class="slider-portfolio">
               <div  class="carta">
                   <p>Trabalhamos em equipe com agências, produtoras e start-ups. Desde a criação, planejamento e produção de uma ideia, até à hora da entrega dela.</br>
-                    APor isso, nos orgulhamos de dizer:Não temos clientes. Temos parceiros. :)
+                    APor isso, nos orgulhamos de dizer:Não temos clientes. Temos parceiros. :)Trabalhamos em equipe com agências, produtoras e start-ups. Desde a criação, planejamento e produção de uma ideia, até à hora da entrega dela.</br>
+                      APor isso, nos orgulhamos de dizer:Não temos clientes. Temos parceiros. :)Trabalhamos em equipe com agências, produtoras e start-ups. Desde a criação, planejamento e produção de uma ideia, até à hora da entrega dela.</br>
+                        APor isso, nos orgulhamos de dizer:Não temos clientes. Temos parceiros. :)Trabalhamos em equipe com agências, produtoras e start-ups. Desde a criação, planejamento e produção de uma ideia, até à hora da entrega dela.</br>
+                          APor isso, nos orgulhamos de dizer:Não temos clientes. Temos parceiros. :)Trabalhamos em equipe com agências, produtoras e start-ups. Desde a criação, planejamento e produção de uma ideia, até à hora da entrega dela.</br>
+                            APor isso, nos orgulhamos de dizer:Não temos clientes. Temos parceiros. :)
                   </p>
 
               </div>
@@ -126,9 +161,15 @@ button{
                   <img src="imgs/trampo.jpg"/>
                 </div>
               </div>
-               <div class="up">
-              <button class="nexto"style="border: 0; background: transparent"><img src="imgs/down-arrow-branca.png"/></button>
+               <div class="down">
+              <button class="nexto" style="border: 0; background: transparent"><img src="imgs/down-arrow-branca.png"/></button>
               </div>
     </div>
 </div>
 <script src="js/massey.js"></script>
+<script type="text/javascript">
+jQuery('button').click(function(){
+   jQuery(this).toggleClass('active');
+   jQuery(this).css('animation', 'parado')
+});
+</script>
