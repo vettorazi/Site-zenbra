@@ -72,11 +72,15 @@ animation: parado;
 }
 
 .botaofechar{
-  position: absolute;
-  right:50px;
-  top:20px;
-  width:10px;
-  height: 10px;
+  display: flex;
+  width: 100%;
+  align-content: flex-end;
+  text-align: right;
+  align-items: flex-end;
+  position: relative;
+  padding-left: 95%;
+  padding-top: 25px;
+
   margin: 0 auto;
   z-index: 9;
 }
@@ -172,4 +176,11 @@ jQuery('button').click(function(){
    jQuery(this).toggleClass('active');
    jQuery(this).css('animation', 'parado')
 });
+
+$('#fecharbt h1').click(function(event) {
+  $('#trabalho').empty();
+  $('html, body').animate({
+scrollTop: $("#portfolio").offset().top
+}, 1000);
+      });
 </script>
