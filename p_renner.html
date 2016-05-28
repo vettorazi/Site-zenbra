@@ -1,14 +1,22 @@
+
 <style media="screen">
 .ajax-container{
+  display: flex;
+  flex-flow: column;
   background-image: url(imgs/portfolio/portfolio_renner.jpg);
+  background-position: center;
+  background-size: cover;
+  height:100vh;
+  overflow: hidden;
 }
-
- .flexslider{
-  height: 310px;
-}
-.flexslider ul{
-  align-items: center;
-  align-content: center;
+.trabalho-inteiro-container{
+  width:600px;
+  height:400px;
+  justify-content: center;
+  flex-flow: column;
+  margin: 0 auto;
+  margin-left: 10%;
+  margin-top: 4%;
 }
 </style>
 
@@ -16,51 +24,84 @@
      <div class="botaofechar" id="fecharbt">
        <h1><i class="ion-close"></i></h1>
      </div>
-     <div class="trabalho-container">
-       <div class="trabalho-esquerda">
-         <div class="trabalho-titulo">
-            <div class="trabalho-logo">
-              <img src="imgs/logo/renner.png" alt="img11" width="90px" height"90px"/>
-            </div>
-            <h1>Espada conectadas à internet</h1>
-          </div>
-            <p>
-              Trabalhamos em equipe com agências, produtoras e start-ups. Desde a criação, planejamento e produção de uma ideia, até à hora da entrega dela.</br>
-              APor isso, nos orgulhamos de dizer: Não temos clientes. Temos parceiros. :)
-            </p>
-        </div>
-        <div class="trabalho-direita">
-          <div class="flexslider">
-            <ul class="slides">
-              <li>
-                <img src="imgs/trabalhos/warner/1.jpg" />
-              </li>
-              <li>
-                <img src="imgs/trabalhos/warner/2.jpg" />
-              </li>
-              <li>
-                <img src="imgs/topslide1.png" />
-                <p>
-                  Trabalhamos em equipe com agências, produtoras e start-ups. Desde a criação, planejamento e produção de uma ideia, até à hora da entrega dela.
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
+     <div class="trabalho-inteiro-container">
+       <div class="trabalho-inteiro-topo">
+         <div class="logo"><img src="imgs/logo/renner.png" alt="img11" class="logo"/></div>
+         <div class="trabalho-titulo"><h1>Espada conectadas à internet</h1></div>
+       </div>
+       <div class="up">
+       <button class="prevo"style="border: 0; background: transparent"><img src="imgs/up-arrow-branca.png"/></button>
+      </div>
+              <div class="slider-portfolio">
+              <div  class="carta">
+                  <p>Trabalhamos em equipe com agências, produtoras e start-ups. Desde a criação, planejamento e produção de uma ideia, até à hora da entrega dela.</br>
+                    APor isso, nos orgulhamos de dizer:Não temos clientes. Temos parceiros. :)Trabalhamos em equipe com agências, produtoras e start-ups. Desde a criação, planejamento e produção de uma ideia, até à hora da entrega dela.</br>
+                      APor isso, nos orgulhamos de dizer:Não temos clientes. Temos parceiros. :)Trabalhamos em equipe com agências, produtoras e start-ups. Desde a criação, planejamento e produção de uma ideia, até à hora da entrega dela.</br>
+                        APor isso, nos orgulhamos de dizer:Não temos clientes. Temos parceiros. :)Trabalhamos em equipe com agências, produtoras e start-ups. Desde a criação, planejamento e produção de uma ideia, até à hora da entrega dela.</br>
+                          APor isso, nos orgulhamos de dizer:Não temos clientes. Temos parceiros. :)Trabalhamos em equipe com agências, produtoras e start-ups. Desde a criação, planejamento e produção de uma ideia, até à hora da entrega dela.</br>
+                            APor isso, nos orgulhamos de dizer:Não temos clientes. Temos parceiros. :)
+                  </p>
+
+              </div>
+                <div class="carta">
+                 <img src="imgs/trabalhos/renner/foto1.png"/>
+                </div>
+                <div class="carta">
+                  <img src="imgs/trabalhos/renner/foto2.png"/>
+                </div>
+                <div class="carta">
+                  <img src="imgs/trabalhos/renner/foto3.png"/>
+                </div>
+                <div class="carta">
+                  <img src="imgs/trabalhos/renner/foto4.png"/>
+                </div>
+                <div class="carta">
+                  <img src="imgs/trabalhos/renner/foto5.png"/>
+                </div>
+                <div class="carta">
+                  <img src="imgs/trabalhos/renner/foto6.png"/>
+                </div>
+                <div class="carta">
+                  <img src="imgs/trabalhos/renner/foto7.png"/>
+                </div>
+                <div class="carta">
+                 <img src="imgs/trabalhos/renner/foto8.png"/>
+                </div>
+                <div class="carta">
+                  <img src="imgs/trabalhos/renner/foto9.png"/>
+                </div>
+                <div class="carta">
+                  <img src="imgs/trabalhos/renner/foto10.png"/>
+                </div>
+                <div class="carta">
+                  <img src="imgs/trabalhos/renner/foto11.png"/>
+                </div>
+                <div class="carta">
+                  <img src="imgs/trabalhos/renner/foto12.png"/>
+                </div>
+                <div class="carta">
+                  <img src="imgs/trabalhos/renner/foto13.png"/>
+                </div>
+                <div class="carta">
+                  <img src="imgs/trabalhos/renner/foto14.png"/>
+                </div>
+              </div>
+               <div class="down">
+              <button class="nexto" style="border: 0; background: transparent"><img src="imgs/down-arrow-branca.png"/></button>
+              </div>
     </div>
 </div>
+<script src="js/renner.js"></script>
 <script type="text/javascript">
+jQuery('button').click(function(){
+   jQuery(this).toggleClass('active');
+   jQuery(this).css('animation', 'parado')
+});
+
 $('#fecharbt h1').click(function(event) {
   $('#trabalho').empty();
   $('html, body').animate({
 scrollTop: $("#portfolio").offset().top
 }, 1000);
       });
-</script>
-
-<script type="text/javascript">
-  console.log("oi");
-  $('.flexslider').flexslider({
-    animation: "slide"
-  });
 </script>
