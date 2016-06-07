@@ -4,6 +4,7 @@ body,html{
   font-family: 'Exo';
   font-style: normal;
   font-weight: 200;
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -410,7 +411,7 @@ display: flex;
   .type-wrap{
     font-family: 'Lemon/Milk';
     font-style: normal;
-    font-size: 100%;
+    font-size: 9vw;
     text-align: justify;
     text-justify: inter-word;
     letter-spacing: 10px;
@@ -418,10 +419,10 @@ display: flex;
   }
 
   .logohome{
-    padding-left: 44px;
-    width: 100px;
+    padding-left: 17%;
+    width: 50%;
     position: absolute;
-  }
+    }
 
 }
 /* -------------------O QUE FAZEMOS PAGINA ---------------------- */
@@ -644,16 +645,25 @@ width: 300px;
 /* -------------------PORTFOLIO PAGINA ---------------------- */
 .portfolio{
   display: flex;
-  background-image: url(../imgs/comofazemosbg.jpg);
+  background-image: url(../imgs/portfoliobg.jpg);
   height:100%;
   min-height: 100vh;
   background-size: cover;
-  background-position: center;
+  background-position: bottom left;
   background-repeat: no-repeat;
   flex-direction: row;
   display:block;
-
 }
+@media only screen and (max-width : 700px) {
+  .portfolio{
+  background-image: url(../imgs/portfoliobg_mobile.jpg);
+}
+.grid figure {
+  width: 15px;
+  height: 15px;
+}
+}
+
 
 /* grid e hovers do portfolio */
 

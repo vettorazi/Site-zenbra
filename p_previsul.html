@@ -1,0 +1,68 @@
+
+<style media="screen">
+.ajax-container{
+  display: flex;
+  flex-flow: column;
+  background-image: url(imgs/portfolio/portfolio_ici.jpg);
+  background-position: center;
+  background-size: cover;
+  height:100vh;
+  overflow: hidden;
+}
+.trabalho-inteiro-container{
+  width:600px;
+  height:400px;
+  justify-content: center;
+  flex-flow: column;
+  margin: 0 auto;
+  margin-right: 10%;
+  margin-top: 4%;
+}
+</style>
+
+<div class="ajax-container">
+     <div class="botaofechar" id="fecharbt">
+       <h1><i class="ion-close"></i></h1>
+     </div>
+     <div class="trabalho-inteiro-container">
+       <div class="trabalho-inteiro-topo">
+         <div class="logo"><img src="imgs/logo/previsul.png" alt="img11" class="logo"/></div>
+         <div class="trabalho-titulo"><h1>Previsul</h1></div>
+       </div>
+       <div class="up">
+       <button class="prevo"style="border: 0; background: transparent"><img src="imgs/up-arrow-branca.png"/></button>
+      </div>
+              <div class="slider-portfolio">
+              <div  class="carta">
+                  <p>Para facilitar o trabalho dos corretores da empresa, criamos um aplicativo de Facebook que puxa vídeos promocionais da empresa no</br>
+                    Youtube e noticias compartilhadas pela Previsul no Linkedin. Assim, os funcionários conseguem encontrar as informações que precisam </br>em um só local.
+
+                  </p>
+
+              </div>
+                <div class="carta">
+                 <img src="imgs/trabalhos/previsul/foto1.png"/>
+                </div>
+                <div class="carta">
+                  <img src="imgs/trabalhos/previsul/foto2.png"/>
+                </div>
+              </div>
+               <div class="down">
+              <button class="nexto" style="border: 0; background: transparent"><img src="imgs/down-arrow-branca.png"/></button>
+              </div>
+    </div>
+</div>
+<script src="js/massey.js"></script>
+<script type="text/javascript">
+jQuery('button').click(function(){
+   jQuery(this).toggleClass('active');
+   jQuery(this).css('animation', 'parado')
+});
+
+$('#fecharbt h1').click(function(event) {
+  $('#trabalho').empty();
+  $('html, body').animate({
+scrollTop: $("#portfolio").offset().top
+}, 1000);
+      });
+</script>
