@@ -730,6 +730,16 @@ width: 300px;
   background-repeat: no-repeat;
   flex-direction: row;
 }
+.contato h1{
+  font-family: 'Exo';
+font-style: normal;
+font-weight: 200;
+font-size: 30;
+}
+.contato a{
+  text-decoration: none;
+  color: #404040;
+}
 
 /* -------------------TRABALHOS PORTFOLIO ---------------------- */
 /*.ajax-container{

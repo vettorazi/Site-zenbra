@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style>
+  .container{
+    background-color: #000;
+    width:100vw;
+    height: 100vh;
+  }
+  @keyframes example {
+       0%   {background-position: top;}
+       50%   {background-position: bottom;}
+       100%   {background-position: top;}
+  }
+  .quad{
+    width: 721px;
+    height: 393px;
+    margin: 0 auto;
+    background-image: url(imgs/back404.png);
+    background-position: top;
+    animation-name: example;
+    animation-duration: 4s;
+    background-color: #fff;
+  }
+
+
+
+  </style>
+  <body>
+    <div class="container">
+      <div class="quad">
+        <img src="imgs/404.png" alt="">
+      </div>
+    </div>
+    <script>
+    $(function(){
+
+        $("#typed").typed({
+            // strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
+            stringsElement: $('#typed-strings'),
+            typeSpeed: 2,
+            backDelay: 500,
+            loop: false,
+            contentType: 'html', // or text
+            // defaults to false for infinite loop
+            loopCount: false,
+            callback: function(){ foo(); },
+            resetCallback: function() { newTyped(); }
+        });
+
+        $(".reset").click(function(){
+            $("#typed").typed('reset');
+        });
+
+    });
+
+    function newTyped(){ /* A new typed object */ }
+
+    function foo(){ console.log("Callback"); }
+
+    </script>
+  <div class="type-wrap">
+      <div id="typed-strings">
+          <p>Imprindo página.</p>
+      </div>
+  </body>
+</html>
